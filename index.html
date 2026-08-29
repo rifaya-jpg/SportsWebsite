@@ -2,32 +2,84 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
-<title>Vibe Find</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Vibe Find</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="hero">
         <h1>Vibe Find</h1>
-        <p>Find your vibe</p>
+        <p class="tagline">Find your vibe</p>
+
+        <div class="search-bar">
+            <span class="search-icon">&#1282669;</span>
+            <input type="text" id="search-input" placeholder="Search for events, activities matching your vibe...">
+        </div>
+
+        <p class="hero-description">
+            VibeFind is a social space made for the secondary school students in Auckland helping them to easily find what's happening arround them
+            &mdash; from indoor games nights and Outdoor feild sports to aesthitic workshops and community events. 
+            whether you're looking to try something new, meet new people, or find your next weekend plan,
+            VibeFind brings it all in one place, sorted by your vibe. No more worries of missing out becuase we got you locked in &mdash; just click, filter and find something fits your vibe
+        </p>
     </header>
-    <nav>
-        <button>Indoor Games</button>
-        <button>Outdoor Games</button>
-        <button>Aesthetic Activities</button>
-        <button>Community Events</button>
-    </nav>
     <main>
-        <section>
-            <div class="event-card">
-                <h3>5-a-side Football</h3>
-                <p>Auckland Domain-Saturady 10am</p>
-                <button>Join</button>
+        <!-- Home View: 4 Big category boxes-->
+         <section id="categories-selection">
+            <h2>Explore Categories</h2>
+            <div class="category-grid">
+                <div class="cat-card" data-category="indoor">
+                    <h3>🎮Indoor Games</h3>
+                    <p>Board games, card games, and more</p>
+                </div>
+                <div class="cat-card" data-category="outdoor">
+                    <h3>🌳Outdoor Games</h3>
+                    <p>Football, basketball, rugby and more</p>
+                </div>
+                <div class="cat-card" data-category="aesthetic">
+                    <h3>🎨Aesthetic Activities</h3>
+                    <p>Art workshops, photography, crafting and more</p>
+                </div>
+                <div class="cat-card" data-category="community">
+                    <h3>🤝Community Events</h3>
+                    <p>Beach clean-ups, charity events, gatherings and more</p>
+                </div>
             </div>
-            <div class="event-card">
-                <h3>Art Workshop</h3>
-                <p>Mt Eden community centre-Sunday 2pm</p>
-                <button>Join</button>
         </section>
-    </main>
-</body>
-</html>
+        <!--Events View: Hidden by defualt-->
+        <section id="events" class="hidden">
+            <button id="back-button">Back to ALL categories</button>
+            <h2 id="active-category-title">Events</h2>
+            
+            <div id="event-grid">
+                <div class="event-card indoor">
+                    <h3>Board Games Night <span class="example-tag">Example</span></h3>
+                    <p>Western Springs Library - Thursday 5pm</p>
+                    <button>Join</button>
+                </div>
+                <div class="event-card outdoor">
+                    <h3>5-a-side Football <span class="example-tag">Example</span></h3>
+                    <p>Auckland Domain - Saturday 10am</p>
+                    <button>Join</button>
+                </div>
+                <div class="event-card aesthetic">
+                    <h3>Art Workshop <span class="example-tag">Example</span></h3>
+                    <p>Mt Eden community centre-Sunday 2pm</p>
+                    <button>Join</button>
+                </div>
+                <div class="event-card community">
+                    <h3>Beach Clean-up <span class="example-tag">Example</span></h3>
+                    <p>Mission Bay Beach - Saturday 9am</p>
+                    <button>Join</button>
+                </div>
+                <div class="add-card">
+                    <h3>+ Add Event</h3>
+                    <p>Create a real event here</p>
+                </div>
+                </div> 
+                </section>
+                </main>
+
+                <script src="script.js"></script>
+                </body>
+                </html>
