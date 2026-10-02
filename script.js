@@ -17,7 +17,7 @@ categoryCards.forEach(card => {
         //Update title to match chosen category
         const categoryName = card.querySelector('h3').textContent;
         if (activeTitle) {
-            activeTitle.textContent = categoryName + 'Events';
+            activeTitle.textContent = categoryName + ' Events';
         }
         // Show only matching event cards 
         eventCards.forEach(eventCard => {
