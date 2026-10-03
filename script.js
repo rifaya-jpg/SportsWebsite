@@ -58,3 +58,43 @@ if (backButton) {
         searchInput.value = '';
     });
 }
+const addCard = document.querySelector('.add-card');
+const addModal = document.getElementById('add-modal');
+const closeModal = document.getElementById('close-modal');
+
+addCard.addEventListener('click', () => {
+    addModal.classList.remove('hidden');
+});
+
+closeModal.addEventListener('click', () => {
+    addModal.classList.add('hidden');
+});
+const addForm = document.getElementById('add-form');
+const eventGrid = document.getElementById('event-grid');
+
+addForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const card = document.createElement('div');
+    card.classList.add('event-card', document.getElementById('new-category').value);
+
+    const title = document.createElement('h3');
+    title.textContent = document.getElementById('new-name').value;
+
+    const info = document.createElement('p');
+    info.textContent = document.getElementById('new-location').value + ' - ' +
+    document.getElementById('new-date').value + ' ' +
+    document.getElementById('new-time').value;
+
+    const extra = document.createElement('p');
+    extra.textContent = 'Price:' + document.getElementById('new-price').value;
+
+    const joinBtn = document.createElement('button');
+    joinBtn.textContent = 'Join';
+
+    card.append(title, info, extra, joinBtn);
+    eventGrid.insertBefore(card, document.querySelector('.add-card'));
+    
+    addForm.reset();
+    addModal.classList.add('hidden');
+});

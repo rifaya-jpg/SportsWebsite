@@ -79,7 +79,28 @@
                 </div> 
                 </section>
                 </main>
-
+                <div id="add-modal" class="modal hidden">
+                    <div class="modal-box">
+                        <button id="close-modal">&times;</button>
+                        <h2>Add Event</h2>
+                        <form id="add-form">
+                            <input type="text" id="new-name" placeholder="Event name" required>
+                            <select id="new-category" required>
+                                <option value="">Choose a category</option>
+                                <option value="indoor">Indoor Games</option>
+                                <option value="outdoor">Outdoor Games</option>
+                                <option value="aesthetic">Aesthetic Activities</option>
+                                <option value="community">Community Events</option>
+                            </select>
+                            <input type="date" id="new-date" required>
+                            <input type="time" id="new-time" required>
+                            <input type="text" id="new-location" placeholder="Location" required>
+                            <input type="text" id="new-price" placeholder="Price (e.g. Free, $5)" required>
+                            <input type="text" id="new-dress" placeholder="Dress code (optional)">
+                            <textarea id="new-desc" placeholder="Description">  </textarea>
+                            <button type="submit">Add Event</button>
+                        </form>
+                    </div>
                 <script src="script.js"></script>
                 </body>
                 </html>
