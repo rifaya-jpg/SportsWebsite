@@ -92,9 +92,32 @@ addForm.addEventListener('submit', (e) => {
     const joinBtn = document.createElement('button');
     joinBtn.textContent = 'Join';
 
-    card.append(title, info, extra, joinBtn);
+    const details = document.createElement('p');
+    details.classList.add('details', 'hidden');
+    details.textContent = 'Dress code: ' + document.getElementById('new-dress').value || 'None' +
+     '. About ' + (document.getElementById('new-desc').value || 'No description yet');
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.classList.add('delete-btn');
+
+    card.append(title, info, extra, joinBtn, deleteBtn, details);
+    
     eventGrid.insertBefore(card, document.querySelector('.add-card'));
     
     addForm.reset();
     addModal.classList.add('hidden');
+});
+eventGrid.addEventListener('click', (e) => {
+    if (e.target.textContent === 'Join') {
+        const details = e.target.parentElement.querySelector('.details');
+        if (details) {
+            details.classList.toggle('hidden');
+        }
+    } 
+    if (e.target.classList.contains('delete-btn')) {
+        if (confirm('Delete this event?')) {
+            e.target.parentElement.remove();
+        }
+    }
 });

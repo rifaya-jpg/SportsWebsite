@@ -206,4 +206,14 @@ h2 {
     border: none;
     font-size: 28px;
     cursor: pointer;
-}                                                                
+}  
+.details {
+    background: #f0f0fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+} 
+.event-card .delete-btn {
+    background-color: #c62828;
+    margin-left: 8px;
+}                                                            
