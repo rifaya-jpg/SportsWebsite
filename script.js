@@ -94,8 +94,8 @@ addForm.addEventListener('submit', (e) => {
 
     const details = document.createElement('p');
     details.classList.add('details', 'hidden');
-    details.textContent = 'Dress code: ' + document.getElementById('new-dress').value || 'None' +
-     '. About ' + (document.getElementById('new-desc').value || 'No description yet');
+    details.textContent = 'Dress code: ' + (document.getElementById('new-dress').value || 'None') +
+     '. About: ' + (document.getElementById('new-desc').value || 'No description yet');
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
